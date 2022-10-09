@@ -15,7 +15,6 @@ public class EmployeeHistory {
     
     public EmployeeHistory(){
         this.history = new ArrayList<Employee>();
-        
     }
 
     public ArrayList<Employee> getHistory() {
@@ -25,4 +24,22 @@ public class EmployeeHistory {
     public void setHistory(ArrayList<Employee> history) {
         this.history = history;
     }
+    
+    public Employee addNewEmployee(){
+        Employee newEmployee = new Employee();
+        history.add(newEmployee);
+        return newEmployee;
+    }
+
+    public void deleteEmployee(Employee selectedEmployee) {
+        history.remove(selectedEmployee);
+    }
+    
+    public int getSize(){
+        return history.size();
+    }
+    
+//    public list getEmployeeList(){
+//    
+//}
 }

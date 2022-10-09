@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
+import java.util.Date;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -10,16 +12,16 @@ package model;
  */
 public class Employee {
     private String name;
-    private int id;
-    private int age;
+    private Integer employeeId;
+    private Integer age;
     private String gender;
-    private String startDate;
+    private Date startDate;
     private String level;
     private String teamInfo;
     private String positionTitle;
-    private int phoneNumber;
-    private String email;
-    private String photo;
+    private String emailAddress;
+    private String phoneNumber;
+    private ImageIcon photo;
 
     public String getName() {
         return name;
@@ -29,19 +31,19 @@ public class Employee {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public Integer getEmployeeId() {
+        return employeeId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -51,14 +53,6 @@ public class Employee {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
     }
 
     public String getLevel() {
@@ -85,28 +79,40 @@ public class Employee {
         this.positionTitle = positionTitle;
     }
 
-    public int getPhoneNumber() {
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoto() {
+    public ImageIcon getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(ImageIcon photo) {
         this.photo = photo;
     }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
     
+    @Override
+    public String toString(){
+        return name;
+    }
 }
