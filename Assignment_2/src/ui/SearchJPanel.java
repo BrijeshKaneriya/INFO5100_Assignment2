@@ -266,6 +266,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         else{
             ArrayList empHistory = employeeHistory.getHistory();
             int i;
+            int count = 0;
             int size = employeeHistory.getSize();
             for(i=0; i<size; i++){
                 Employee emp = (Employee)empHistory.get(i);
@@ -294,8 +295,12 @@ public class SearchJPanel extends javax.swing.JPanel {
                     jTeamInfoTxtField.setEnabled(false);
                     jGenderTxtField.setEnabled(false);
                     jEmailAddressTxtField.setEnabled(false);
+                    count++;
+                    break;
                 }
-                else{
+            
+            }
+            if (count==0){
                     JOptionPane.showMessageDialog(this, "No record found for this email ID");
                     jNameTxtField.setText("");
                     jEmpIdTxtField.setText("");
@@ -308,8 +313,7 @@ public class SearchJPanel extends javax.swing.JPanel {
                     jEmailAddressTxtField.setText("");
                     jMobileNumberTxtField.setText("");
                     jPhotoLabel.setIcon(null);
-                }
-            }
+               }
         }
     }//GEN-LAST:event_jEmailBtnActionPerformed
 
@@ -321,6 +325,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         else{
             ArrayList empHistory = employeeHistory.getHistory();
             int i;
+            int count = 0;
             int size = employeeHistory.getSize();
             for(i=0; i<size; i++){
                 Employee emp = (Employee)empHistory.get(i);
@@ -349,8 +354,11 @@ public class SearchJPanel extends javax.swing.JPanel {
                     jTeamInfoTxtField.setEnabled(false);
                     jGenderTxtField.setEnabled(false);
                     jEmailAddressTxtField.setEnabled(false);
+                    count++;
+                    break;
                 }
-                else{
+            }
+            if(count==0){
                     JOptionPane.showMessageDialog(this, "No record found for this name");
                     jNameTxtField.setText("");
                     jEmpIdTxtField.setText("");
@@ -364,7 +372,6 @@ public class SearchJPanel extends javax.swing.JPanel {
                     jMobileNumberTxtField.setText("");
                     jPhotoLabel.setIcon(null);
                 }
-            }
         }
     }//GEN-LAST:event_jNameBtnActionPerformed
 
